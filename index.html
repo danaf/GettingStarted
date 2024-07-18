@@ -29,6 +29,9 @@
             // add content type header to object
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append("Access-Control-Allow-Origin", "*");
+            myHeaders.append("AllowMethods", "POST")
+            myHeaders.append("AllowHeaders", "Content-Type,X-Amz-Date,X-Amz-Security-Token,Authorization,X-Api-Key,X-Requested-With,Accept,Access-Control-Allow-Methods,Access-Control-Allow-Origin,Access-Control-Allow-Headers")            
+
             // using built in JSON utility package turn object to string and store in a variable
             var raw = JSON.stringify({"firstName":firstName,"lastName":lastName});
             // create a JSON object with parameters for API call and store in a variable
